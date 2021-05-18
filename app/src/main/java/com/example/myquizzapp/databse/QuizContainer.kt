@@ -1,4 +1,4 @@
-package com.example.myquizzapp
+package com.example.myquizzapp.databse
 
 import android.provider.BaseColumns
 

@@ -1,24 +1,26 @@
-package com.example.myquizzapp
+package com.example.myquizzapp.databse
 
 import android.content.ContentValues
 import android.content.Context
-import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.provider.BaseColumns
+import com.example.myquizzapp.model.Question
 
 import java.util.ArrayList
 
-import com.example.myquizzapp.QuizContainer.QuizTable.*
-import com.example.myquizzapp.QuizContainer.QuizTable.Companion.ANS_COLUMN
-import com.example.myquizzapp.QuizContainer.QuizTable.Companion.OPTION1_COLUMN
-import com.example.myquizzapp.QuizContainer.QuizTable.Companion.OPTION2_COLUMN
-import com.example.myquizzapp.QuizContainer.QuizTable.Companion.OPTION3_COLUMN
-import com.example.myquizzapp.QuizContainer.QuizTable.Companion.QUESTION_COLUMN
-import com.example.myquizzapp.QuizContainer.QuizTable.Companion.QUESTION_TABLE_NAME
+import com.example.myquizzapp.databse.QuizContainer.QuizTable.Companion.ANS_COLUMN
+import com.example.myquizzapp.databse.QuizContainer.QuizTable.Companion.OPTION1_COLUMN
+import com.example.myquizzapp.databse.QuizContainer.QuizTable.Companion.OPTION2_COLUMN
+import com.example.myquizzapp.databse.QuizContainer.QuizTable.Companion.OPTION3_COLUMN
+import com.example.myquizzapp.databse.QuizContainer.QuizTable.Companion.QUESTION_COLUMN
+import com.example.myquizzapp.databse.QuizContainer.QuizTable.Companion.QUESTION_TABLE_NAME
 
 
-class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+class DatabaseHelper(context: Context) : SQLiteOpenHelper(context,
+    DATABASE_NAME, null,
+    DATABASE_VERSION
+) {
 
     private var db: SQLiteDatabase? = null
 
@@ -72,13 +74,37 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     private fun GenerateQuestionFunction() {
         val q1 = Question("2+2", "1", "5", "4", 3)
         addQuestion(q1)
-        val q2 = Question("What is Capital of India", "Mumbai", "New Delhi", "Chennai", 2)
+        val q2 = Question(
+            "What is Capital of India",
+            "Mumbai",
+            "New Delhi",
+            "Chennai",
+            2
+        )
         addQuestion(q2)
-        val q3 = Question("The author of Harry Potter book is", "J.K Rowling", "Stephen King", "Toni Morrison", 1)
+        val q3 = Question(
+            "The author of Harry Potter book is",
+            "J.K Rowling",
+            "Stephen King",
+            "Toni Morrison",
+            1
+        )
         addQuestion(q3)
-        val q4 = Question("Which is fourth planet from sun?", "Mars", "Earth", "Venus", 1)
+        val q4 = Question(
+            "Which is fourth planet from sun?",
+            "Mars",
+            "Earth",
+            "Venus",
+            1
+        )
         addQuestion(q4)
-        val q5 = Question("How many gram are there in a kilogram", "100", "1000", "10000", 2)
+        val q5 = Question(
+            "How many gram are there in a kilogram",
+            "100",
+            "1000",
+            "10000",
+            2
+        )
         addQuestion(q5)
     }
 

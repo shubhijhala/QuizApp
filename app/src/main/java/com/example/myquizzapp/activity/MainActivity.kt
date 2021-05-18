@@ -1,11 +1,9 @@
-package com.example.myquizzapp
+package com.example.myquizzapp.activity
 
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         val startQuiz = findViewById<Button>(R.id.startButton)
         startQuiz.setOnClickListener {
-            startActivityForResult(Intent(applicationContext, MainQuiz::class.java), REQUEST_CODE)
+            startActivityForResult(Intent(applicationContext, MainQuiz::class.java),
+                REQUEST_CODE
+            )
         }
     }
 

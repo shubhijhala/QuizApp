@@ -1,4 +1,4 @@
-package com.example.myquizzapp
+package com.example.myquizzapp.model
 
 
 class Question {

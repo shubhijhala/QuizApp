@@ -1,4 +1,4 @@
-package com.example.myquizzapp
+package com.example.myquizzapp.activity
 
 import android.app.Activity
 import android.content.Intent
@@ -13,8 +13,9 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myquizzapp.model.Question
 import com.example.myquizzapp.R
-import java.util.Collections
+import com.example.myquizzapp.databse.DatabaseHelper
 import java.util.Collections.shuffle
 import java.util.Locale
 
@@ -116,7 +117,8 @@ class MainQuiz : AppCompatActivity() {
 
             mSubmit!!.text = "Confirm"
 
-            timeLeft = COUNTDOWN_TIMER
+            timeLeft =
+                COUNTDOWN_TIMER
             startCountDown()
         } else {
             finishQuizActivity()
