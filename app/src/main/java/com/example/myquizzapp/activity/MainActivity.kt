@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private var txtHighScore: TextView? = null
 
-    private var mhighscore: Int = 10
+    private var mhighscore: Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
